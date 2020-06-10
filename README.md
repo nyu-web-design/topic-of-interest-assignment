@@ -22,7 +22,7 @@ Before you begin, you will need to download a copy of JQuery's Javascript code.
 
 1. Go to [jquery.com](https://jquery.com/)
 1. Go to the Download page.
-1. Click to download the "uncompressed" or "minified" version of the code.
+1. Click to download the "compressed" or "minified" version of the code.
 1. Save that code into your project's `js` directory in a file named `jquery.min.js`. The exact file name may vary depending upon the version.
 1. Do not modify the contents of this file.
 1. Link to this file from HTML using a `<script>` element nested within the `<head>` element.
