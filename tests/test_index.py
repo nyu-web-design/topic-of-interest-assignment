@@ -64,12 +64,13 @@ class Tests:
       elem_option2 = driver.find_element_by_xpath("//a[@href='" + url + "']")
       assert elem_option1 or elem_option2 # check that it exists
 
+
   def test_link_text_exists(self, driver):
     """
     Check text of links to all assignment pages.
     """
     target_terms = ['JQuery']
+    elems = [x.text.strip().lower().replace('assignment', '') for x in driver.find_elements_by_css_selector("a")]
+    elems = ''.join(elems)
     for term in target_terms:
-      elem = driver.find_element_by_partial_link_text(term)
-      assert elem # check that a matching element exists
-
+      assert term.lower() in elems
