@@ -4,13 +4,17 @@ Welcome! In this assignment, you will add Javascript code to a new page on your 
 
 Any new or updated files required for your site to look and function correctly must be published to the web by uploading them within your web root directory on the web server.
 
-The new Javascript file must be named `main.js` reside in a sub-directory named `js` and be linked from all pages of your site.
+The new Javascript file must be named `main.js` reside in a sub-directory named `js`. The JQuery file will also reside in this directory. Both Javascript files must be linked to from the new HTML document you make in this assignment.
 
 ## Requirements
 
 Some rules about interactive behaviors for specific pages follow.
 
 On top of these requirements, you are welcome to add any additional interaction you believe will make this page compelling and stimulating to someone finding it on the web.
+
+### Copy existing web site files
+
+The work you do in this assignment will be published to the same directory where your current web site currently exists. To prevent you from accidentally deleting any of your existing web site files, copy all the files from your existing web site into the main project directory for this assignment. This means copying any existing HTML, CSS, images, and other files and directories so a copy exists within this project directory. Then we will be able to upload everything in this directory to the web server and replace all existing files without worry about losing anything.
 
 ### Download JQuery
 
@@ -21,6 +25,7 @@ Before you begin, you will need to download a copy of JQuery's Javascript code.
 1. Click to download the "uncompressed" or "minified" version of the code.
 1. Save that code into your project's `js` directory in a file named `jquery.min.js`. The exact file name may vary depending upon the version.
 1. Do not modify the contents of this file.
+1. Link to this file from HTML using a `<script>` element nested within the `<head>` element.
 
 ### Custom Javascript code
 
