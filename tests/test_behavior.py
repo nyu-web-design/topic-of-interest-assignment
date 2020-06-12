@@ -35,6 +35,34 @@ class Tests:
     # now tear it down
     driver.close()
 
+  def test_image_swap(self, driver, settings):
+    """
+    Check for a valid image swap, where the img tag's src attribute changes on mouseover and reverts on mouseout.
+    """
+    # grab necessary elements for interaction
+    jquery_settings = settings["jquery_settings"]["image_swap"]
+    target = driver.find_element_by_css_selector(jquery_settings["trigger_element_selector"])
+    
+    # get the original text before interaction
+    original_src = target.get_attribute('src')
+
+    # mouse over
+    ActionChains(driver).move_to_element(target).perform()
+    
+    # grab the new src
+    mouseover_src = target.get_attribute('src')
+
+    # mouse out
+    # grab some other element
+    other_el = driver.find_element_by_tag_name('body')
+    ActionChains(driver).move_to_element(other_el).perform() 
+
+    # grab the new src after interaction
+    mouseout_src = target.get_attribute('src')
+
+    assert original_src != mouseover_src
+    assert original_src == mouseout_src
+
   def test_content_change(self, driver, settings):
     """
     Check that the text content within the target element changes after the event occurs.
@@ -65,35 +93,6 @@ class Tests:
     new_text = target.text
 
     assert new_text != original_text
-
-
-  def test_image_swap(self, driver, settings):
-    """
-    Check for a valid image swap, where the img tag's src attribute changes on mouseover and reverts on mouseout.
-    """
-    # grab necessary elements for interaction
-    jquery_settings = settings["jquery_settings"]["image_swap"]
-    target = driver.find_element_by_css_selector(jquery_settings["trigger_element_selector"])
-    
-    # get the original text before interaction
-    original_src = target.get_attribute('src')
-
-    # mouse over
-    ActionChains(driver).move_to_element(target).perform()
-    
-    # grab the new src
-    mouseover_src = target.get_attribute('src')
-
-    # mouse out
-    # grab some other element
-    other_el = driver.find_element_by_tag_name('body')
-    ActionChains(driver).move_to_element(other_el).perform() 
-
-    # grab the new src after interaction
-    mouseout_src = target.get_attribute('src')
-
-    assert original_src != mouseover_src
-    assert original_src == mouseout_src
 
   def test_animation(self, driver, settings):
     """
