@@ -51,6 +51,17 @@ At a minimum, you must include the following event-driven behaviors using JQuery
 - **image swap** - change the `src` attribute of any `<img>` element on the page (the 'target' element) when the user mouses over that same element in order to replace the original image with a new one. When the user mouses out of that `<img>` element, change the `src` attribute back so the original image is displayed again. With an image swap, the 'trigger' element and 'target' elements are one-and-the-same.
 - **animation** - change the position on the page of any element on the page (the 'target' element) when the user performs a click, mouseover, or mouseout event on any other element of your choosing (the 'trigger' element). Do this by using JQuery's `animate()` function to adjust the target element's `left` and `top` properties. Note that the target element must have its `position` CSS property set to `relative` or `absolute` in order for this to work.
 
+## Extra credit
+
+For up to 10% extra, you may Incorporate another third party Javascript library. Some ideas:
+
+- scrollMagic for animations controlled by the scroll bar
+- the Retina.js library to offer images that are twice as large for high-resolution screens
+- VelocityJS to add more UI/UX effects like "shake",
+- soundJS to add sound to your site and web applications
+
+When you submit your work, let us know if you have done the extra credit option.
+
 ## Submit your work
 
 In order to submit this assignment, you must publish all modified files to the web and upload the code to GitHub.
