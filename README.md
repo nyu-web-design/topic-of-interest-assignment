@@ -55,10 +55,10 @@ At a minimum, you must include the following event-driven behaviors using JQuery
 
 For up to 10% extra, you may Incorporate another third party Javascript library. Some ideas:
 
-- scrollMagic for animations controlled by the scroll bar
-- the Retina.js library to offer images that are twice as large for high-resolution screens
-- VelocityJS to add more UI/UX effects like "shake",
-- soundJS to add sound to your site and web applications
+- [scrollMagic](https://scrollmagic.io/) for animations controlled by the scroll bar
+- the [Retina.js](https://imulus.github.io/retinajs/) library to offer images that are twice as large for high-resolution screens
+- [VelocityJS](http://velocityjs.org/) to add more UI/UX effects like "shake",
+- [soundJS](https://createjs.com/soundjs) to add sound to your site and web applications
 
 When you submit your work, let us know if you have done the extra credit option.
 
